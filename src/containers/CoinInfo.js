@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Treebeard } from 'react-treebeard';
 import Alert from 'react-s-alert';
+import moment from 'moment';
 
 import data from '../coinInfor/index';
 import Menu from '../components/BurgerMenu';
@@ -30,7 +31,7 @@ class CoinInfo extends Component {
 
   alertPriceChange(newPrice) {
     Alert.warning(
-      `<h3>${newPrice}원</h3><h6>${new Date()}</h6>`, 
+      `<h3>${newPrice}원</h3><h6>${moment(new Date()).format('MMMM Do YYYY, h:mm:ss a')}</h6>`, 
       {
         position: 'bottom-left',
         html: true,
