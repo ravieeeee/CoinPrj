@@ -7,7 +7,7 @@ import famousCoins from '../coinInfor/famousCoins';
 export default class CoinTable extends Component {
   renderCoinBlock(idx) {
     return (
-      <td>
+      <td key={famousCoins[idx]}>
         <Coin coinName={famousCoins[idx]} />
       </td>
     );
